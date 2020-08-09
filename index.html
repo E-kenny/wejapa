@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            width: 60%;
+            margin: auto;
+        }
+  input {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+input[type=checkbox]{
+    width: 5%;
+}
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color*/
+.valid {
+  color: green;
+}
+
+/* Add a red text color*/
+.invalid {
+  color: red;
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekenny form </title>
+    
+</head>
+<body>
+    <div>
+        <form action="index.php" method="post" onsubmit="return checkForm(this)">
+            <label for="firstname">First Name :<br><input type="text" name="firstname" id="firstname" required></label><br>
+            
+            <label for="secondname">Second Name : <br><input type="text" name="secondname" id="secondname" required></label><br>
+            
+            <label for="email">Email : <br><input type="text" name="email" id="email" required></label><br>
+            
+            <label for="date">Date Of Birth : <br><input type="date" name="date" id="date" required></label><br>
+            
+            <label for="color">Favorite Color : <br><input type="color" name="color" id="color" required></label><br>
+           
+            <label for="gender">Gender : 
+               <label for="male">Male: <input type="checkbox" name="gender" id="male" onclick="onlyOne(this)" value="male"></label> 
+                <label for="female">Female: <input type="checkbox" name="gender" id="female" onclick="onlyOne(this)" value="female"></label>
+            </label><br>
+    
+           <label for="department"> Department :<br> 
+            <select name="department" id="department">
+            <option value="IT">IT</option>
+            <option value="hr">HR</option>
+            <option value="stuff">stuff</option>
+            </select><br>
+            </label>
+    
+            <label for="password">Password :<br><input type="password" name="password" id="pwd1"  required></label><br>
+    
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    
+<script type="text/javascript">
+        function checkPassword(str){
+    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-!$%^&*()_+`{}\[\]:";'<>?,.\/]).{8,}$/;
+    return re.test(str);
+  }
+
+  function checkForm(form) {
+    let d = new Date(form.date.value)
+
+    if(form.pwd1.value != "" ) {
+      if(!checkPassword(form.pwd1.value)) {
+        alert("The password you have entered is not valid!, there must be at least one lowercase letter,one uppercase letter,a number,a symbol and they must be equal or greater than 8 character");
+        form.pwd1.focus();
+        return false;
+      }
+
+      if(form.male.checked==false && form.female.checked ==false){
+        alert("you must select either male or female")
+        return false
+      }
+
+      if( d.getFullYear() > 2020){
+        alert("select proper year")
+        return false
+      }
+    
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+    return true;
+  }
+  function onlyOne(checkbox){
+    var checkboxes = document.getElementsByName('gender')
+    checkboxes.forEach((item)=>{
+      if (item !== checkbox)item.checked = false
+    })
+  }
+
+</script>
+</body>
+</html>
