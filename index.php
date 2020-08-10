@@ -39,6 +39,33 @@
            text-align:center;
        }
 
+        
+@media screen and (max-width:800px) {
+        .grid{
+            font-size:20px;
+            display:grid;
+            grid-template-columns:auto;
+            grid-template-rows:auto auto auto auto ;
+            justify-content:space-between;
+            align-content:center;
+            row-gap:10px
+        }
+         .grid-item1{
+            grid-column:1/2;
+    
+        }
+        .grid-item2{
+            grid-row:2/3;
+    
+        }
+       .grid-item3{
+        grid-area:3 / 1 /4 / 2;
+       } 
+       .grid-item4{
+        grid-area: 4 / 1/ 5 / 2;
+       }  
+       
+} 
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

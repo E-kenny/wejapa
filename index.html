@@ -83,7 +83,7 @@ input[type=checkbox]{
            <label for="department"> Department :<br> 
             <select name="department" id="department">
             <option value="IT">IT</option>
-            <option value="hr">HR</option>
+            <option value="HR">HR</option>
             <option value="stuff">stuff</option>
             </select><br>
             </label>
@@ -96,7 +96,7 @@ input[type=checkbox]{
     
 <script type="text/javascript">
         function checkPassword(str){
-    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#@~-!$%^&*()_+`{}\[\]:";'<>?,.\/]).{15,}$/;
+    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-~@#!$%^&*()_+`{}\[\]:";'<>?,.\/]).{15,}$/;
     return re.test(str);
   }
 
