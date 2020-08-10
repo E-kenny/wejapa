@@ -16,7 +16,7 @@
         }
         .grid{
             display:grid;
-            grid-template-columns:20% 25% 25% 20% ;
+            grid-template-columns:20% 23% 23% 20% ;
             grid-template-rows:auto auto;
             justify-content:space-between;
             align-content:center;
