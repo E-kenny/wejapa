@@ -16,7 +16,7 @@
         }
         .grid{
             display:grid;
-            grid-template-columns:20% 23% 23% 20% ;
+            grid-template-columns:22% 23% 23% 22% ;
             grid-template-rows:auto auto;
             justify-content:space-between;
             align-content:center;
@@ -37,7 +37,7 @@
        } 
        h1{
            text-align:center;
-       }
+            }
 
         
 @media screen and (max-width:800px) {
