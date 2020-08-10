@@ -42,7 +42,7 @@
         
 @media screen and (max-width:800px) {
         .grid{
-            font-size:20px;
+            font-size:15px;
             display:grid;
             grid-template-columns:auto;
             grid-template-rows:auto auto auto auto ;
