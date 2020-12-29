@@ -76,7 +76,7 @@
     <div class="grid">
        <div class="grid-item1"><h3>wejapa Internship week 3 task (form validation)</h3></div>
        <div class="grid-item2">My name is <?php echo $firstname." ". $secondname ; ?> I was born <?php echo $dateofbirth;?> I am a <?php echo $gender ;?> from Nigeria and I'm single, in the department of <?php echo $department;?> and my email address is <?php echo $email ; ?> </div>
-       <div class="grid-item3">I'm a mechanical Engineering graduate from formally Anambra state university now Chukwuemeka Odumegwu Ojukwu university.</div>
+       <div class="grid-item3">I want to explore the world of programming</div>
        <div class="grid-item4">I love coding, sport(soccer), mathematics, cars and technology.</div>
     </div>
 </body>
